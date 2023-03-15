@@ -22,5 +22,5 @@ use App\Http\Controllers\Api\ProjectController;
 // Tutte le rotte API per i progetti
 // Route::apiResource('projects', ProjectController::class);
 
-// Rotta API per metodo index
+// Rotta API per il metodo index
 Route::get('/projects', [ProjectController::class, 'index']);
