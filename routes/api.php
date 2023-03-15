@@ -19,5 +19,8 @@ use App\Http\Controllers\Api\ProjectController;
 //     return $request->user();
 // });
 
+// Tutte le rotte API per i progetti
+// Route::apiResource('projects', ProjectController::class);
 
+// Rotta API per metodo index
 Route::get('/projects', [ProjectController::class, 'index']);
