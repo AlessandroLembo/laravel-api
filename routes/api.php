@@ -26,4 +26,4 @@ use App\Http\Controllers\Api\ProjectController;
 Route::get('/projects', [ProjectController::class, 'index']);
 
 // Rotta per il dettaglio del singolo Progetto
-Route::get('/project/{id}', [ProjectController::class, 'show']);
+Route::get('/projects/{project}', [ProjectController::class, 'show']);
