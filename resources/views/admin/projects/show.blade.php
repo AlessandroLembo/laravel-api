@@ -15,7 +15,7 @@
           
         </div>
         <div class="col-6">
-            <div class="d-flex flex-column align-items-start">
+            <div class="d-flex flex-column align-items-start"> 
                 <p><i>Ultima modifica: </i><strong>{{ $date }}</strong></p>  
                 <p>{{ $project->description }}</p>
                 <p class="fs-4"><strong>Tecnologie:</strong> 
