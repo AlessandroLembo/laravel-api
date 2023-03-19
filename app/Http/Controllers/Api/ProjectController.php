@@ -66,8 +66,6 @@ class ProjectController extends Controller
         if (!$type) return response(null, 404);
 
         $projects = Project::where('type_id', $type->id)->with('technologies', 'type')->paginate(2);
-        // $projects = $type->projects;
-        // ->with('type', 'technologies');
 
         foreach ($projects as $project) {
             if ($project->image) $project->image = url('storage/' . $project->image);

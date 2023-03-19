@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Technology;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Arr;
+use Carbon\Carbon;
 use Illuminate\Validation\Rule;
 
 class ProjectController extends Controller
@@ -110,7 +111,8 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        return view('admin.projects.show', compact('project'));
+        $date = Carbon::create($project->updated_at)->format('d-m-Y');
+        return view('admin.projects.show', compact('project', 'date'));
     }
 
     /**

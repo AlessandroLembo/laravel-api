@@ -7,16 +7,16 @@
     <div class="row justify-content-center">
         <div class="col-6">
             @if ($project->image)
-                <figure class="d-flex justify-content-center">
-                    <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->name }}" class="ps-image-project">
+            <figure class="d-flex justify-content-center">
+                <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->name }}" class="ps-image-project">
 
-                </figure>
+            </figure>
             @endif
-
+          
         </div>
         <div class="col-6">
             <div class="d-flex flex-column align-items-start">
-                <h2>{{ $project->slug }}</h2>
+                <p><i>Ultima modifica: </i><strong>{{ $date }}</strong></p>  
                 <p>{{ $project->description }}</p>
                 <p class="fs-4"><strong>Tecnologie:</strong> 
                  
