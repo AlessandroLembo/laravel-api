@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:5173'], // qui autorizzo gli url che sono autorizzati a fare la chiamate API
+    'allowed_origins' => ['http://localhost:5174'], // qui autorizzo gli url che sono autorizzati a fare la chiamate API
 
     'allowed_origins_patterns' => [],
 

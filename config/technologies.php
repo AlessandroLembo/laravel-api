@@ -11,7 +11,7 @@ return [
     ],
     [
         "label" => "Bootstrap",
-        "color" => "info-emphasis",
+        "color" => "dark",
     ],
     [
         "label" => "Javascript",
