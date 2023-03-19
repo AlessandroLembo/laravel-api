@@ -27,3 +27,6 @@ Route::get('/projects', [ProjectController::class, 'index']);
 
 // Rotta per il dettaglio del singolo Progetto
 Route::get('/projects/{project}', [ProjectController::class, 'show']);
+
+// Rotta per i progetti raggruppati per tipo, prendo l'id del progetto che appartiene a quel tipo
+Route::get('/types/{id}/projects', [ProjectController::class, 'typeProjectsIndex']);

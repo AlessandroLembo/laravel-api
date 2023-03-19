@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Project;
 use App\Http\Controllers\Controller;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -15,6 +16,7 @@ class ProjectController extends Controller
     {
         $projects = Project::where('is_published', true)->with('type', 'technologies')->orderBy('updated_at', 'DESC')->paginate(3);
 
+        // Giro su ogni progetto e controllo se ha un'immagine, se si costruisco l'url intero
         foreach ($projects as $project) {
             if ($project->image) $project->image = url('storage/' . $project->image);
         }
@@ -53,5 +55,23 @@ class ProjectController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    // Funzione per raggruppare i progetti per tipo, quindi mi serve l'id del singolo type
+    public function typeProjectsIndex(string $id)
+    {
+        // recupero il type 
+
+        $type = Type::find($id);
+        if (!$type) return response(null, 404);
+
+        $projects = Project::where('type_id', $type->id)->with('technologies', 'type')->paginate(2);
+        // $projects = $type->projects;
+        // ->with('type', 'technologies');
+
+        foreach ($projects as $project) {
+            if ($project->image) $project->image = url('storage/' . $project->image);
+        }
+        return response()->json(compact('projects', 'type'));
     }
 }
