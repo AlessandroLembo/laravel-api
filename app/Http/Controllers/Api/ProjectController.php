@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Project;
 use App\Http\Controllers\Controller;
 use App\Models\Type;
+use App\Models\Technology;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -72,4 +73,13 @@ class ProjectController extends Controller
         }
         return response()->json(compact('projects', 'type'));
     }
+
+    // public function technologiesProjectsIndex(string $id)
+    // {
+    //     $technologies = Technology::find($id);
+    //     if (!$technologies) return response(null, 404);
+
+    //     $projects = Project::where('technologies_id', $technologies->id)->get();
+    //     return response()->json(compact('projects', 'technologies'));
+    // }
 }
