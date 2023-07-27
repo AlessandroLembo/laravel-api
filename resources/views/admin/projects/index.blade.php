@@ -7,9 +7,9 @@
         <div class="d-flex align-items-center justify-content-between">
             <h1 class="text-center my-5 fs-1">Projects</h1>
             <div>
-                <a href="{{ route('admin.projects.create') }}" class="btn btn-success">Aggiungi Progetto</a>
-                <a href="{{ route('admin.types.create') }}" class="btn btn-secondary">Crea nuovo tipo</a>
-                <a href="{{ route('admin.technologies.create') }}" class="btn btn-dark">Crea nuova tecnologia</a>
+                <a href="{{ route('admin.projects.create') }}" class="btn btn-success mt-2">Aggiungi Progetto</a>
+                <a href="{{ route('admin.types.create') }}" class="btn btn-secondary mt-2">Crea nuovo tipo</a>
+                <a href="{{ route('admin.technologies.create') }}" class="btn btn-dark mt-2">Crea nuova tecnologia</a>
             </div>
             
         </div>
@@ -28,7 +28,7 @@
         </div>
        
     </header>
-    
+      <div class="table-responsive">
         <table class="table">
             <thead>
                 <tr>
@@ -93,6 +93,7 @@
 
             </tbody>
         </table>
+    </div>
 
         <div class="d-flex justify-content-end">
                 {{-- Stampo il paginatore --}}
