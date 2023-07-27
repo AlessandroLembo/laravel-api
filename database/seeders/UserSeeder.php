@@ -11,14 +11,8 @@ class UserSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
-    {
-        $user = new User();
+    // public function run(): void
+    // {
 
-        $user->name = "Alessandro";
-        $user->email = "alessandrolembo2@gmail.com";
-        $user->password = bcrypt('Progetto');
-
-        $user->save();
-    }
+    // }
 }
